@@ -1,10 +1,11 @@
 #include <SFML/Graphics.hpp>
+#include "Pacman.h"
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Hello, SFML world!");
-	window.setFramerateLimit(60);
-	//Cvijet cvijet(&window);
+	sf::RenderWindow window(sf::VideoMode(800, 600), "Hello, PACMAN IS COMING!");
+	window.setFramerateLimit(360);
+	Pacman pacman(&window);
 
 	while (window.isOpen())
 	{
@@ -16,7 +17,7 @@ int main()
 		}
 
 		window.clear();
-		//cvijet.draw();
+		pacman.draw();
 		window.display();
 	}
 
